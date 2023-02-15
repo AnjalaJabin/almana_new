@@ -1,0 +1,54 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-09-21 06:23:37 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:23:43 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:23:43 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:04 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:07 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:07 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:25 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:39 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:47 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:47 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:24:47 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:25:19 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:25:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:25:22 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 06:25:27 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:33:49 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:33:49 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:33:51 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:33:53 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:33:53 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:34:08 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:34:11 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 10:34:11 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 12:51:49 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 12:51:49 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 12:51:52 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 12:51:54 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 12:51:54 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:10:21 --> Severity: Notice --> Undefined index: root_id /home/almanag4demo/public_html/application/views/login_new.php 12
+ERROR - 2022-09-21 13:10:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:10:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:10:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:10:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:10:23 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:40 --> Severity: Notice --> Undefined index: root_id /home/almanag4demo/public_html/application/views/login_new.php 12
+ERROR - 2022-09-21 13:36:40 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:40 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:41 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:48 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:51 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:52 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:52 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 13:36:53 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 14:32:40 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 14:32:40 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 14:32:54 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 14:32:58 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 14:32:58 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 17:51:01 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 17:51:09 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 17:51:09 --> 404 Page Not Found: /index
+ERROR - 2022-09-21 17:51:31 --> 404 Page Not Found: /index

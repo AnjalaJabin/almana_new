@@ -1,0 +1,10 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-10-17 18:11:09 --> Severity: Notice --> Undefined index: share_holder_name /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 111
+ERROR - 2021-10-17 18:11:09 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 111
+ERROR - 2021-10-17 18:11:09 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 23
+ERROR - 2021-10-17 18:11:09 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 24
+ERROR - 2021-10-17 18:11:20 --> Severity: Notice --> Undefined index: share_holder_name /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 111
+ERROR - 2021-10-17 18:11:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 111
+ERROR - 2021-10-17 18:11:20 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 23
+ERROR - 2021-10-17 18:11:20 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 24

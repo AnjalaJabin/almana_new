@@ -1,0 +1,86 @@
+ALTER TABLE `xin_currencies` ADD UNIQUE(`code`);
+ALTER TABLE `budgeting` ADD `currency` VARCHAR(11) NOT NULL AFTER `budget_document`;
+
+--------------------------13-9-2022-------------------------------------------------------------------------------------
+ALTER TABLE `budgeting` ADD `budget_code` VARCHAR(11) NOT NULL AFTER `id`;
+-- Table structure for table `requests`
+--
+
+DROP TABLE IF EXISTS `requests`;
+CREATE TABLE IF NOT EXISTS `requests` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `expense_type` varchar(11) NOT NULL,
+  `remarks` text NOT NULL,
+  `budget_id` int(11) NOT NULL,
+  `main_cat_id` int(11) NOT NULL,
+  `sub_cat_id` int(11) NOT NULL,
+  `requested_amount` int(11) NOT NULL,
+  `approved_amount` int(11) NOT NULL,
+  `requester_id` int(11) NOT NULL,
+  `department_id` int(11) NOT NULL,
+  `approver_id` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `requested_date` date NOT NULL,
+  `approved_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+COMMIT;
+
+ALTER TABLE `requests` ADD `created_date` DATE NOT NULL AFTER `approved_date`;
+ALTER TABLE `requests` CHANGE `expense_type` `expense_type` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+
+ALTER TABLE `budget_expenses` ADD `emp_id` VARCHAR(50) NOT NULL AFTER `department_id`;
+
+
+-------------22-09-2022----------------------
+ALTER TABLE `budget_expenses` CHANGE `emp_id` `emp_id` VARCHAR(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;
+ALTER TABLE `budget_expenses`  ADD `exp_type` int(11) ;
+ALTER TABLE `budget_expenses`  ADD `currency` VARCHAR(11) NOT NULL  AFTER `exp_type`;
+ALTER TABLE `budget_expenses` ADD `initial_amount` INT NOT NULL AFTER `currency`;
+ALTER TABLE `budget_cost_center` ADD `cost_center_code` VARCHAR(11) NOT NULL AFTER `date`;
+ALTER TABLE `requests`  ADD `initial_req_amount` INT(11) NOT NULL  AFTER `requested_amount`,  ADD `currency` VARCHAR(11) NOT NULL  AFTER `initial_req_amount`;
+-------password reset----
+DROP TABLE IF EXISTS `password_reset`;
+CREATE TABLE IF NOT EXISTS `password_reset` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `root_id` int(20) NOT NULL,
+  `uid` int(20) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `code_1` varchar(250) NOT NULL,
+  `code_2` varchar(250) NOT NULL,
+  `time` int(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+27/09/2022
+ALTER TABLE `budget_expenses` ADD `emp_code` VARCHAR(20) NOT NULL AFTER `emp_id`;
+ALTER TABLE `xin_employees` ADD `emp_code` VARCHAR(20) NOT NULL
+
+
+21-10-22
+
+DROP TABLE IF EXISTS `tax`;
+CREATE TABLE IF NOT EXISTS `tax` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `tax_code` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `value` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tax`
+--
+
+INSERT INTO `tax` (`id`, `name`, `tax_code`, `value`) VALUES
+(1, 'Input VAT - Non Applicable/Non Recoverable', 'VN-I', NULL),
+(2, 'Input VAT 0%', 'V0-I', NULL),
+(3, 'Input VAT 5%', 'V5-I', NULL),
+(4, 'Input VAT -Exempt', 'VE-I', NULL),
+(5, 'VAT -Reverse Charge', 'VR-I', NULL);
+COMMIT;
+
+ALTER TABLE `budget_expenses` ADD `tax_code` VARCHAR(200) ;
+

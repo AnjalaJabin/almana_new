@@ -1,0 +1,15 @@
+ Quote,Amount,Customer,"Quotation Date","Expiry Date",Reference,Status
+QUOTE-000020,"AED  4725","real madrid",2018-03-18,2018-03-25,dsasa,draft
+QUOTE-000019,"AED  4515","real madrid",2018-03-15,2018-03-22,,draft
+QUOTE-000018,"AED  38115","real madrid",2018-03-14,2018-03-21,zidane,draft
+QUOTE-000017,"AED  1575","real madrid",2018-03-08,2018-03-15,vc,draft
+QUOTE-000016,"AED  2782.5","cmc inc",2018-03-08,2018-03-15,manager,draft
+QUOTE-000015,"AED  10080","cmc inc",2018-03-08,2018-03-15,d,draft
+QUOTE-000014,"AED  3150",apple,2018-03-08,2018-03-15,yrtd,draft
+QUOTE-000013,"AED  3465",apple,2018-03-08,2018-03-15,dfs,draft
+QUOTE-000012,"AED  630",apple,2018-03-08,2018-03-15,"marketing head",draft
+QUOTE-000011,"AED  8610","real madrid",2018-03-10,2018-03-15,ceo,draft
+QUOTE-000010,"AED  26250","real madrid",2018-03-08,2018-03-15,,draft
+QUOTE-000009,"AED  4620",apple,2018-03-08,2018-03-15,,draft
+QUOTE-000008,"AED  7875",apple,2018-03-08,2018-03-15,,draft
+QUOTE-00007,"AED  6825","cmc inc",2018-03-05,2018-03-12,manaager,draft

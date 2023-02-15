@@ -1,0 +1,10 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-02-18 11:38:27 --> Severity: Notice --> Undefined index: root_id /home/softwarecompany/public_html/subapp/application/models/Dashboard_model.php 525
+ERROR - 2022-02-18 11:38:27 --> Severity: Notice --> Undefined index: user_id /home/softwarecompany/public_html/subapp/application/models/Dashboard_model.php 526
+ERROR - 2022-02-18 11:38:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and added_by=' at line 1 - Invalid query: SELECT DATE_FORMAT(quotation_date, "%Y-%m") AS month, COUNT(*) AS total,sum(g_total) as gtotal,sum(total_tax) as total_tax FROM pricing_quotes where DATE_FORMAT(quotation_date, "%Y-%m-%d") between "1970-01-01" and "1970-01-01" and root_id= and added_by=  
+ERROR - 2022-02-18 11:38:27 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/system/core/Common.php 570
+ERROR - 2022-02-18 11:38:38 --> Severity: Notice --> Trying to access array offset on value of type null /home/softwarecompany/public_html/subapp/application/controllers/Settings.php 992
+ERROR - 2022-02-18 11:38:38 --> Severity: Notice --> Undefined index: root_id /home/softwarecompany/public_html/subapp/application/models/Xin_model.php 222
+ERROR - 2022-02-18 11:38:39 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Settings.php 24
+ERROR - 2022-02-18 11:38:39 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Settings.php 25

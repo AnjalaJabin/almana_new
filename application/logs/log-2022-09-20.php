@@ -1,0 +1,53 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-09-20 11:02:41 --> Severity: Notice --> Undefined index: root_id /home/almanag4demo/public_html/application/views/login_new.php 12
+ERROR - 2022-09-20 11:02:42 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:02:42 --> Severity: Notice --> Undefined index: root_id /home/almanag4demo/public_html/application/views/login_new.php 12
+ERROR - 2022-09-20 11:02:42 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:02:43 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:02:44 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:02:44 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:12:48 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 11:12:48 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:17 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:18 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:18 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:26 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:31 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 12:17:31 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:25:58 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:06 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:11 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:11 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:15 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:22 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:24 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:26:24 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:28:37 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:28:41 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:28:41 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:35:57 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:35:59 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:35:59 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:36:03 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:37:02 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:37:04 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:38:49 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:38:51 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:38:51 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:38:52 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:19 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:21 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:22 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:22 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:23 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:42:23 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:50:24 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:50:24 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 13:50:24 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:04:17 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:04:20 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:04:20 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:16:05 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:16:05 --> 404 Page Not Found: /index
+ERROR - 2022-09-20 16:16:05 --> 404 Page Not Found: /index

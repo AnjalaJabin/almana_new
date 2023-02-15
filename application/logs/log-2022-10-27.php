@@ -1,0 +1,47 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-10-27 11:19:53 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:19:53 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:19:53 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:20:25 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:20:45 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:20:45 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:20:49 --> Severity: Warning --> Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) /home/almanag4demo/public_html/application/views/budgeting/add_expense.php 366
+ERROR - 2022-10-27 11:20:49 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:21:20 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:21:22 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:21:22 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:30:58 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:30:58 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:31:06 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:31:10 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:31:10 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:31:12 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 11:31:42 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:34:11 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:34:13 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:34:13 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:34:27 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:35:11 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:35:12 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:40 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:40 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:43 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:43 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:49 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:53 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:56 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:56 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:56:56 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:58:04 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 12:58:19 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 13:03:32 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 13:07:26 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 13:07:26 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 13:07:26 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index
+ERROR - 2022-10-27 23:09:21 --> 404 Page Not Found: /index

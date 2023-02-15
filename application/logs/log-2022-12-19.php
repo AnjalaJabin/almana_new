@@ -1,0 +1,30 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-12-19 00:31:33 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 03:47:02 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 06:08:41 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 08:41:27 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 08:43:25 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 08:47:50 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 10:50:36 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 10:54:57 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 11:10:19 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 11:15:46 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 11:42:51 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 11:55:49 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 13:11:52 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 14:11:34 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 14:44:47 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 14:55:10 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 15:52:01 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 16:17:20 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 18:49:18 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 19:11:59 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 21:55:38 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 22:02:49 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 22:30:34 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 23:46:03 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 23:49:51 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 23:56:30 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 23:56:30 --> 404 Page Not Found: /index
+ERROR - 2022-12-19 23:56:31 --> 404 Page Not Found: /index

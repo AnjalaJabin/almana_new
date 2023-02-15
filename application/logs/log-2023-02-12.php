@@ -1,0 +1,35 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2023-02-12 03:24:39 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 04:15:52 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 05:35:35 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 06:36:30 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 07:57:23 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 07:57:24 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 07:57:26 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 08:17:31 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 08:21:45 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 09:27:41 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 10:24:43 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 12:26:52 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 13:20:10 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 13:41:25 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:00:36 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:00:46 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:00:53 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:21:31 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:21:33 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:21:34 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:32:59 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 15:35:39 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 16:15:06 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 18:17:10 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 18:17:12 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 18:17:14 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 18:48:38 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 19:04:56 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 19:04:57 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 19:40:41 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 20:56:11 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 21:39:56 --> 404 Page Not Found: /index
+ERROR - 2023-02-12 22:44:03 --> 404 Page Not Found: /index

@@ -1,0 +1,24 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-08-18 12:08:53 --> Severity: Notice --> Undefined index: beneficial_owner_name /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 1333
+ERROR - 2021-08-18 12:08:53 --> Severity: Warning --> Invalid argument supplied for foreach() /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 1333
+ERROR - 2021-08-18 12:08:53 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 26
+ERROR - 2021-08-18 12:08:53 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 27
+ERROR - 2021-08-18 12:09:03 --> Severity: Notice --> Undefined index: beneficial_owner_name /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 1333
+ERROR - 2021-08-18 12:09:03 --> Severity: Warning --> Invalid argument supplied for foreach() /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 1333
+ERROR - 2021-08-18 12:09:03 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 26
+ERROR - 2021-08-18 12:09:03 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/application/controllers/Customers.php 27
+ERROR - 2021-08-18 15:49:08 --> Severity: Notice --> Array to string conversion /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 40
+ERROR - 2021-08-18 15:49:08 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/system/helpers/url_helper.php 564
+ERROR - 2021-08-18 16:00:53 --> Severity: Notice --> Undefined variable: customer_key /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 98
+ERROR - 2021-08-18 16:01:43 --> Severity: Notice --> Undefined property: Public_data::$Customers_model /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 136
+ERROR - 2021-08-18 16:01:43 --> Severity: error --> Exception: Call to a member function update_record() on null /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 136
+ERROR - 2021-08-18 16:01:43 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/system/core/Common.php 564
+ERROR - 2021-08-18 16:34:37 --> Severity: Notice --> Undefined variable: public_root_id /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 138
+ERROR - 2021-08-18 16:34:37 --> Severity: Notice --> Undefined property: Public_data::$Customers_model /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 141
+ERROR - 2021-08-18 16:34:37 --> Severity: error --> Exception: Call to a member function get_all_custom_customer_fields() on null /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 141
+ERROR - 2021-08-18 16:34:37 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/system/core/Common.php 564
+ERROR - 2021-08-18 16:34:59 --> Severity: Notice --> Undefined property: Public_data::$Customers_model /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 141
+ERROR - 2021-08-18 16:34:59 --> Severity: error --> Exception: Call to a member function get_all_custom_customer_fields() on null /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 141
+ERROR - 2021-08-18 16:34:59 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /home/softwarecompany/public_html/subapp/system/core/Exceptions.php:271) /home/softwarecompany/public_html/subapp/system/core/Common.php 564
+ERROR - 2021-08-18 17:34:41 --> Severity: Notice --> Undefined property: stdClass::$name /home/softwarecompany/public_html/subapp/application/controllers/Public_data.php 77

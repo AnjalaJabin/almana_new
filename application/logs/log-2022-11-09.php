@@ -1,0 +1,150 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-11-09 17:21:58 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:00 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:00 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:35 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:38 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:52 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:53 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:22:53 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:03 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:05 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:05 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:30 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:30 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:31 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:31 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:35 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:35 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:36 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:37 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:50 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:51 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:51 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:24:54 --> Could not find the language line "xin_employee_details"
+ERROR - 2022-11-09 17:25:14 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:15 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:15 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:19 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:19 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:21 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:21 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:32 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:33 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:34 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:34 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:41 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:42 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:25:42 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:28:01 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:28:06 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:28:07 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:28:07 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:39:35 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:39:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 17:39:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:42 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:49 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:49 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:55 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:37:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:39:03 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:39:09 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:39:09 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:40:42 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:40:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:40:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:41:18 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:41:20 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:41:20 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:42:16 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:42:17 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:42:17 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:47:38 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:47:40 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:47:40 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:52:13 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:52:22 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:52:22 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:54:34 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:54:36 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:54:36 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:40 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:41 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:41 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:55 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:55 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:56:59 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:57:03 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:57:03 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:57:12 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:24 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:25 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:25 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:31 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:31 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:32 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 18:59:32 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 19:06:02 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 19:10:54 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 19:10:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 19:10:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 20:11:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:09:55 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:09:57 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:09:57 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:10:15 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:10:30 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:10:30 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 22:10:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:34:31 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:31 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:34:33 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:34 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:35 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:35 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:36 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:34:40 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:34:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:34:44 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:34:51 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/edit_expense.php 217
+ERROR - 2022-11-09 23:35:12 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/add_expense.php 214
+ERROR - 2022-11-09 23:35:45 --> Severity: error --> Exception: Call to undefined method xin_model::get_companies() /home/almanag4demo/public_html/application/views/budgeting/add_expense.php 214
+ERROR - 2022-11-09 23:36:25 --> Severity: Warning --> Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) /home/almanag4demo/public_html/application/views/budgeting/add_expense.php 391
+ERROR - 2022-11-09 23:36:26 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:36:28 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:36:28 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:36:38 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:36:38 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:36:45 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:29 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:38 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:48 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:49 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:49 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:53 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:53 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:46:56 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:09 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:12 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:12 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:27 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:27 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:28 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:28 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:30 --> Severity: Warning --> Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) /home/almanag4demo/public_html/application/views/budgeting/add_expense.php 391
+ERROR - 2022-11-09 23:47:32 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:32 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:47:33 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:48:12 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:48:13 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:48:14 --> 404 Page Not Found: /index
+ERROR - 2022-11-09 23:48:14 --> 404 Page Not Found: /index
