@@ -80,6 +80,13 @@ class Employees extends MY_Controller {
 		$option = '';
             $role_resources_ids = $this->Xin_model->user_role_resource();
 
+        $stores =$this->Employees_model->read_stores_allocated($r->stores);
+        $stores_user ='';
+        if(!empty($stores)) {
+            foreach ($stores as $store) {
+                $stores_user .= $store->code . " ";
+            }
+        }
 
                 if($r->is_active==2): $status = '<span data-toggle="tooltip" data-placement="top" title="In-Active" class="badge badge-light-danger">In-Active</span>';
 		elseif($r->is_active==1): $status = '<span data-toggle="tooltip" data-placement="top" title="Active" class="badge badge-light-success">Active</span>'; endif;
@@ -89,6 +96,11 @@ class Employees extends MY_Controller {
             if(in_array('9',$role_resources_ids))
                 $option.= '<span data-toggle="tooltip" data-placement="top" title="'.$this->lang->line('xin_delete').'"><button type="button" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1 delete" data-bs-toggle="modal" data-bs-target=".delete-modal" data-record-id="'. $r->user_id . '"><i class="fas fa-trash"></i></button></span>';
 
+            $max_chars = 10;
+
+            if (strlen($stores_user) > $max_chars) {
+                $stores_user = substr($stores_user, 0, $max_chars) . "..";
+            }
 
 
 		$data[] = array(
@@ -96,6 +108,7 @@ class Employees extends MY_Controller {
 			$r->emp_code,
 			$r->email,
 			$r->contact_no,
+            $stores_user,
 			$r->created_at,
 			$r->last_login_date,
 			$status,
@@ -141,7 +154,10 @@ class Employees extends MY_Controller {
 		if($Return['error']!=''){
        		$this->output($Return);
     	}
-
+        $stores='';
+            if(!empty($this->input->post('stores'))){
+                $stores = implode(',',$this->input->post('stores'));
+            }
     	$fname='';
     	/* Check if file uploaded..*/
 		if(isset($_FILES['avatar']['tmp_name']) && is_uploaded_file($_FILES['avatar']['tmp_name'])) {
@@ -175,6 +191,7 @@ class Employees extends MY_Controller {
 		'pslt' => $salt,
 		'user_role_id' => $this->input->post('roles'),
 		'profile_picture' => $fname,
+        'stores'=>$stores,
 		'contact_no' => $this->input->post('user_mobile'),
 		'created_at' => date('d-m-Y'),
 		);
@@ -235,6 +252,7 @@ class Employees extends MY_Controller {
 		$id = $this->input->get('employee_id');
 		$session = $this->session->userdata('username');
 		$result = $this->Employees_model->read_employee_information($id);
+//        $stores =$this->Employees_model->read_stores_allocated($result[0]->stores);
 		$data['breadcrumbs'] = $this->lang->line('xin_employee_details');
 		$data['path_url'] = 'employees';
 
@@ -249,6 +267,7 @@ class Employees extends MY_Controller {
 			'user_role_id' =>$result[0]->user_role_id,
 			'department_id' =>$result[0]->department_id,
 			'user_type' =>$result[0]->designation_id,
+            'stores_user'=>$result[0]->stores,
 			);
 
 		if(!empty($session)){
@@ -281,6 +300,11 @@ class Employees extends MY_Controller {
 		if($Return['error']!=''){
        		$this->output($Return);
     	}
+            $stores='';
+            if(!empty($this->input->post('stores'))){
+                $stores = implode(',',$this->input->post('stores'));
+            }
+
             $fname='';
             /* Check if file uploaded..*/
             if(isset($_FILES['avatar']['tmp_name']) && is_uploaded_file($_FILES['avatar']['tmp_name'])) {
@@ -302,6 +326,7 @@ class Employees extends MY_Controller {
 		'department_id' => $this->input->post('department'),
 		'is_active' => $this->input->post('status'),
 		'contact_no' => $this->input->post('user_mobile'),
+        'stores'=>$stores,
 		);
             if($fname)
             {
@@ -311,7 +336,10 @@ class Employees extends MY_Controller {
 
 		$id = $this->input->post('user_id');
             $result = $this->Employees_model->update_employee($data,$id);
-        //check if the logged in user is edited
+
+
+
+            //check if the logged in user is edited
         if($this->session->userdata('username')['user_id']==$id){
             $user_info = $this->Employees_model->read_user_by_id($id);
             $designation = $user_info[0]->designation_name ?? "General";

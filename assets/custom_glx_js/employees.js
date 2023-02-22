@@ -1,5 +1,7 @@
 $(document).ready(function() {
-var xin_table_employee = $('#xin_table_employee').DataTable({
+	$('#store-select').select2();
+
+	var xin_table_employee = $('#xin_table_employee').DataTable({
 	"bDestroy": true,
 	"bProcessing"   :   true,
 	dom: 'lBfrtip',
@@ -173,6 +175,54 @@ $("#add_user_form").submit(function(e){
 			}
 		});
 	});
+	$('#store-select').select2();
+	function generateRow() {
+		var html = '<div class="row form-group mb-3">';
+		html += '<div class="card-header" id="select_period_div" style="display:block;">';
+		html += '<div class="card-title fs-3 fw-bolder">';
+		html += '<div class="w-200 w-md-600px" style="background: rgb(221, 221, 221); padding: 7px;">';
+		html += '<div class="input-group">';
+		html += '<select  name="period[]" class="form-select form-select-solid select_period" data-placeholder="Allowance Period" data-allow-clear="true">';
+		html += '<option value="">Select Allowance Period..</option>';
+		$.each(periods, function(i, period) {
+			html += '<option value="' + period.id + '">' + formatDate(period.from_date) + ' - ' + formatDate(period.to_date) + '</option>';
+		});
+		html += '</select>';
+		html += '<input type="text" class="form-control form-control-solid" placeholder="Amount" name="amount[]" />';
+		// html += '<span class="input-group-btn">';
+		// html += '<button class="btn btn-success group_add_main_cat_sub_btn add_period" type="button"><i class="fa fa-plus"></i></button>';
+		// html += '</span>';
+		html += '<span class="input-group-btn">';
+		html += '<button class="btn btn-danger group_remove_main_cat_sub_btn" type="button"><i class="fa fa-times"></i></button>';
+		html += '</span>';
+		html += '</div></div></div></div></div>';
+
+		$("#allowance-div").append(html);
+
+		// Initialize select2 for the new row
+		$('.select_period').select2();
+
+
+	}
+	function formatDate(dateString) {
+		var date = new Date(dateString);
+		var day = date.getDate();
+		var month = date.toLocaleString('default', { month: 'short' });
+		var year = date.getFullYear();
+		return day + ' ' + month.toUpperCase() + ' ' + year;
+	}
+	// Add new row
+	$(document).on('click', '.add_period', function() {
+		// $(this).hide();
+		// $(this).closest('.input-group').find('.remove_period').attr("style", "display:block");
+		generateRow();
+	});
+
+	// Remove current row
+	$(document).on('click', '.group_remove_main_cat_sub_btn', function() {
+		$(this).closest('.row.form-group.mb-3').remove();
+	});
+
 });
 
 

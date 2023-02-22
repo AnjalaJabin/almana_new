@@ -123,8 +123,35 @@ class xin_model extends CI_Model {
         }
 
     }
-    
-    
+    public function read_allowance_by_employee($employee_id){
+        $condition = "employee_id='".$employee_id."'";
+        $this->db->select('*');
+        $this->db->from('allowances');
+        $this->db->where($condition);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+
+    public function read_allowance_by_id($id){
+        $this->db->select('*');
+        $this->db->from('allowances');
+        $this->db->where('id',$id);
+        $this->db->limit(1);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+
+
     public function convert_to_current_currency($value='',$currencyfrom,$currencyto,$type=0)
     {
         $currency_from = $this->get_currency_data_by_code($currencyfrom);
@@ -336,6 +363,36 @@ class xin_model extends CI_Model {
 
         return $query->result();
     }
+    public function read_doc_type_data_by_id($id) {
+        $condition = "id ='".$id."'";
+        $this->db->select('*');
+        $this->db->from('doc_types');
+        $this->db->where($condition);
+        $this->db->limit(1);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+    public function read_periods_data_by_id($id) {
+        $condition = "id ='".$id."'";
+        $this->db->select('*');
+        $this->db->from('allowance_period');
+        $this->db->where($condition);
+        $this->db->limit(1);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+    public function read_store_data_by_id($id) {
+        $condition = "id ='".$id."'";
+        $this->db->select('*');
+        $this->db->from('stores');
+        $this->db->where($condition);
+        $this->db->limit(1);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
 
     public function read_suppliers_data_by_id($id) {
         $condition = "id ='".$id."'";
@@ -352,6 +409,29 @@ class xin_model extends CI_Model {
     public function get_all_cost_centers() {
         $this->db->select('*');
         $this->db->from('budget_cost_center');
+        return $this->db->get();
+    }
+    public function get_all_doc_types() {
+        $this->db->select('*');
+        $this->db->from('doc_types');
+        return $this->db->get();
+    }
+    public function get_all_allowance_category() {
+        $this->db->select('*');
+        $this->db->from('allowance_category');
+        return $this->db->get();
+    }
+
+
+    public function get_all_stores() {
+        $this->db->select('*');
+        $this->db->from('stores');
+        return $this->db->get();
+    }
+    public function get_all_periods() {
+        $this->db->select('allowance_period.*,allowance_category.name as category');
+        $this->db->from('allowance_period');
+        $this->db->join('allowance_category','allowance_category.id=allowance_period.category_id');
         return $this->db->get();
     }
     public function get_all_companies() {
@@ -423,7 +503,7 @@ class xin_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
     public function get_tot_budget_amount(){
 
         $session = $this->session->userdata('username');
@@ -446,9 +526,9 @@ class xin_model extends CI_Model {
                 $total_amount = $total_amount+$re_amount;
             }
         }
-        
+
         if($total_amount==0){
-            
+
             $query = $this->db->query("SELECT ac.amount, b.currency FROM budget_subcat_employee_assign ba, assigned_budget_sub_cats ac, budgeting b WHERE ba.sub_cat_id=ac.sub_category_id and b.id=ac.budget_id");
             $total_amount = 0;
             foreach($query->result() as $data){
@@ -459,12 +539,12 @@ class xin_model extends CI_Model {
                     $total_amount = $total_amount+$re_amount;
                 }
             }
-            
+
         }
-        
+
         return $total_amount;
     }
-    
+
     public function get_all_expense_counts()
     {
         $session = $this->session->userdata('username');
@@ -490,7 +570,7 @@ class xin_model extends CI_Model {
         }
         return array('amount'=>$total_amount,'count'=>$exp_count);
     }
-    
+
     public function get_all_expense_counts_old()
     {
         $session = $this->session->userdata('username');
@@ -501,7 +581,7 @@ class xin_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
     public function get_budget_exp_count(){
         $session = $this->session->userdata('username');
         $user = $this->read_user_info($session['user_id']);
@@ -527,7 +607,7 @@ class xin_model extends CI_Model {
         }
         return array('amount'=>$total_amount,'count'=>$exp_count);
     }
-    
+
     public function get_budget_exp_count_old(){
         $session = $this->session->userdata('username');
         $user = $this->read_user_info($session['user_id']);
@@ -538,7 +618,7 @@ class xin_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
     public function get_direct_exp_count(){
         $session = $this->session->userdata('username');
         $user = $this->read_user_info($session['user_id']);
@@ -560,7 +640,7 @@ class xin_model extends CI_Model {
         }
         return array('amount'=>$total_amount,'count'=>$exp_count);
     }
-    
+
     public function get_direct_exp_count_old(){
         $session = $this->session->userdata('username');
         $user = $this->read_user_info($session['user_id']);
@@ -571,7 +651,7 @@ class xin_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
     public function get_my_exp_count(){
         $session = $this->session->userdata('username');
         $user = $this->read_user_info($session['user_id']);
@@ -599,6 +679,23 @@ class xin_model extends CI_Model {
         $query = $this->db->query("SELECT * from categories where department_id='".$department_id."' and LOWER(name)='".strtolower($data)."' ");
         if ($query->num_rows() == 1) {
             return true;
+        } else {
+            return false;
+        }
+    }
+    public function check_period_exists($data) {
+        $query = $this->db->query("SELECT * from allowance_period where category_id='".$data['category_id']."' and from_date='".$data['from_date']."' and to_date='".$data['to_date']."'");
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
+    public function check_allowance_exists($employee,$period) {
+        $query = $this->db->query("SELECT * from allowances where employee_id='".$employee."' and period_id='".$period."'");
+        if ($query->num_rows() > 0) {
+            return $query->result();
         } else {
             return false;
         }
@@ -647,6 +744,23 @@ class xin_model extends CI_Model {
             return false;
         }
     }
+    public function check_doc_type_exist($cost) {
+        $query = $this->db->query("SELECT * from doc_types where LOWER(name)='".strtolower($cost)."' ");
+        if ($query->num_rows() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function check_store_exist($store) {
+        $query = $this->db->query("SELECT * from stores where LOWER(name)='".strtolower($store)."' ");
+        if ($query->num_rows() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function check_supplier_exist($suppliers) {
         $query = $this->db->query('SELECT * from suppliers where LOWER(name)="'.strtolower($suppliers).'"');
@@ -661,6 +775,29 @@ class xin_model extends CI_Model {
     // Function to add record in table
     public function add_departments($data){
         $this->db->insert('departments', $data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } public function add_doc_type($data){
+    $this->db->insert('doc_types', $data);
+    if ($this->db->affected_rows() > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+    public function add_period($data){
+        $this->db->insert('allowance_period', $data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function add_store($data){
+        $this->db->insert('stores', $data);
         if ($this->db->affected_rows() > 0) {
             return true;
         } else {
@@ -767,6 +904,15 @@ class xin_model extends CI_Model {
             return false;
         }
     }
+    public function update_allowance($data, $id){
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        if( $this->db->update('allowances',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     public function update_currency($data, $id){
         $condition = "currency_id =" . "'" . $id . "' ";
         $this->db->where($condition);
@@ -813,6 +959,33 @@ class xin_model extends CI_Model {
             return false;
         }
     }
+    public function update_doc_type($data, $id){
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        if( $this->db->update('doc_types',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function update_period($data, $id){
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        if( $this->db->update('allowance_period',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function update_store($data, $id){
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        if( $this->db->update('stores',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // Function to update record in table
@@ -842,6 +1015,15 @@ class xin_model extends CI_Model {
             $this->db->delete('categories');
             return 1;
         }
+    }
+    public function delete_doc_type($id){
+
+
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        $this->db->delete('doc_types');
+        return 1;
+
     }
 
 
@@ -916,6 +1098,15 @@ class xin_model extends CI_Model {
             return 1;
         }
     }
+    public function delete_store($id){
+
+
+        $condition = "id =" . "'" . $id . "' ";
+        $this->db->where($condition);
+        $this->db->delete('stores');
+        return 1;
+
+    }
 
 
     public function delete_supplier($id){
@@ -929,6 +1120,20 @@ class xin_model extends CI_Model {
             $condition = "id =" . "'" . $id . "' ";
             $this->db->where($condition);
             $this->db->delete('suppliers');
+            return 1;
+        }
+    }
+    public function delete_period($id){
+
+        $query = $this->db->query("SELECT * from allowances where period_id='".$id."' ");
+        if ($query->num_rows() >= 1) {
+            return 0;
+        }
+        else
+        {
+            $condition = "id =" . "'" . $id . "' ";
+            $this->db->where($condition);
+            $this->db->delete('allowance_period');
             return 1;
         }
     }

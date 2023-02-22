@@ -45,7 +45,41 @@ class employees_model extends CI_Model {
             return false;
         }
     }
+ public function read_allowances_user($id){
+        $this->db->select('allowances.*,allowance_period.from_date,allowance_period.to_date');
+        $this->db->from('allowances');
+        $this->db->join('allowance_period','allowance_period.id=allowances.period_id');
+        $this->db->where('employee_id',$id);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
 
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
+ public function get_current_user_allowance($id){
+        $this->db->select('sum(amount) as total,sum(spent_amount) as expense');
+        $this->db->from('allowances');
+        $this->db->join('allowance_period','allowance_period.id=allowances.period_id');
+         $this->db->where("to_date >="."'".date('Y-m-d')."'");
+         $this->db->where("from_date <="."'".date('Y-m-d')."'");
+        $this->db->where('employee_id',$id);
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+public function get_employee_allowances(){
+    $this->db->select('allowances.*,xin_employees.first_name,xin_employees.last_name,xin_employees.emp_code,xin_employees.email,xin_employees.stores,allowance_period.from_date,allowance_period.to_date,allowance_category.name as category,allowance_category.id as category_id');
+    $this->db->from('allowances');
+    $this->db->join('allowance_period','allowance_period.id=allowances.period_id');
+    $this->db->join('allowance_category','allowance_category.id=allowance_period.category_id');
+    $this->db->join('xin_employees','xin_employees.user_id=allowances.employee_id');
+//    $this->db->where("to_date >="."'".date('Y-m-d')."'");
+//    $this->db->where("from_date <="."'".date('Y-m-d')."'");
+    return $this->db->get();
+}
     // get total number of employees
 	public function get_total_employees() {
 	    $condition = " deleted=0";
@@ -70,7 +104,19 @@ class employees_model extends CI_Model {
 			return false;
 		}
 	}	
-	
+	public function read_stores_allocated($stores) {
+        $storearray = explode(",", $stores);
+        $this->db->select('*');
+        $this->db->from('stores');
+        $this->db->where_in('id', $storearray);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return false;
+		}
+	}
+
 	// Function to add record in table
 	public function add_employee($data){
 		$this->db->insert('xin_employees', $data);

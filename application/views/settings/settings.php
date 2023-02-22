@@ -1,7 +1,7 @@
 <?php
 $role_resources_ids = $this->Xin_model->user_role_resource();
 $session = $this->session->userdata('username');?>
-<div class="toolbar" id="kt_toolbar">
+<div class="toolbar" id="kt_toolbar" xmlns="http://www.w3.org/1999/html">
     <!--begin::Container-->
     <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
         <!--begin::Page title-->
@@ -56,9 +56,25 @@ $session = $this->session->userdata('username');?>
 					            </span>
                                 </button>
                             <?php }
+                            if (in_array('14', $role_resources_ids)) { ?>
+
+                                <button class="nav-link" class="nav-link" id="v-pills-stores-tab" data-bs-toggle="pill" data-bs-target="#stores" type="button" role="tab" aria-controls="stores" aria-selected="false">
+								<span class="d-flex flex-column align-items-start">
+					                <span class="fs-4 fw-bolder">Stores</span>
+					            </span>
+                                </button>
+                            <?php }
+                            if (in_array('14', $role_resources_ids)) { ?>
+
+                                <button class="nav-link" class="nav-link" id="v-pills-doc_types-tab" data-bs-toggle="pill" data-bs-target="#doc_types" type="button" role="tab" aria-controls="doc_types" aria-selected="false">
+								<span class="d-flex flex-column align-items-start">
+					                <span class="fs-4 fw-bolder">Document Types</span>
+					            </span>
+                                </button>
+                            <?php }
                             if (in_array('34', $role_resources_ids)) { ?>
 
-                                <button class="nav-link" class="nav-link" id="v-pills-cost-center-tab" data-bs-toggle="pill" data-bs-target="#company" type="button" role="tab" aria-controls="cost-center" aria-selected="false">
+                                <button class="nav-link" class="nav-link" id="v-pills-cmpany-tab" data-bs-toggle="pill" data-bs-target="#company" type="button" role="tab" aria-controls="cost-center" aria-selected="false">
 								<span class="d-flex flex-column align-items-start">
 					                <span class="fs-4 fw-bolder">Company</span>
 					            </span>
@@ -77,6 +93,14 @@ $session = $this->session->userdata('username');?>
                                 <button class="nav-link" id="v-pills-vendor-tab" data-bs-toggle="pill" data-bs-target="#vendor" type="button" role="tab" aria-controls="vendor" aria-selected="false">
 								<span class="d-flex flex-column align-items-start">
 					                <span class="fs-4 fw-bolder">Vendor/Supplier</span>
+					            </span>
+                                </button>
+                            <?php } if (in_array('15', $role_resources_ids)) { ?>
+
+
+                                <button class="nav-link" id="v-pills-vendor-tab" data-bs-toggle="pill" data-bs-target="#period" type="button" role="tab" aria-controls="vendor" aria-selected="false">
+								<span class="d-flex flex-column align-items-start">
+					                <span class="fs-4 fw-bolder">Allowance Period</span>
 					            </span>
                                 </button>
                             <?php }?>
@@ -246,6 +270,112 @@ $session = $this->session->userdata('username');?>
                                     </div>
                                 </div>
                             <?php }
+                            if (in_array('14', $role_resources_ids)) { ?>
+
+                                <div class="tab-pane fade" id="doc_types" role="tabpanel" aria-labelledby="v-pills-doc_types-tab">
+                                    <div class="row">
+                                        <div class="col-md-4 ">
+                                            <div class="box box-block bg-white p-3">
+                                                <h4><strong>Add New</strong> Document Type</h4>
+                                                <div class="separator mb-4 mt-4"></div>
+                                                <form class="m-b-1 add" id="add_doctype" action="<?php echo site_url("settings/add_doctype") ?>" name="add_doctype" method="post">
+                                                    <div class="form-group mb-5">
+                                                        <label class="required fs-6 fw-bold mb-2">Document Type</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder="Document Type" name="name" />
+                                                        <label class="required fs-6 fw-bold mb-2">Code</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder="Code" name="code" />
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary save">Save</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="box box-block bg-white p-5">
+                                                <div id ="export_doc_type" class="d-flex justify-content-end"></div>
+
+                                                <h2><strong>List All</strong> Document Type</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-row-bordered table-row-gray-100 align-middle gs-3 gy-3" id="xin_table_doc_type" style="width: 100%;" role="grid">
+                                                        <thead>
+                                                        <tr class="fw-bolder text-muted bg-light">
+                                                            <th class="ps-4 rounded-start w-125px">Action</th>
+                                                            <th class="ps-4 rounded-start">Document Type</th>
+                                                            <th class="ps-4 rounded-start">Code</th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }
+
+                            if (in_array('14', $role_resources_ids)) { ?>
+
+                                <div class="tab-pane fade" id="stores" role="tabpanel" aria-labelledby="v-pills-cost-center-tab">
+                                    <div class="row">
+                                        <div class="col-md-4 ">
+                                            <div class="box box-block bg-white p-3">
+                                                <h4><strong>Add New</strong> Store</h4>
+                                                <div class="separator mb-4 mt-4"></div>
+                                                <form class="m-b-1 add" id="add_store" action="<?php echo site_url("settings/add_store") ?>" name="add_cost_center" method="post">
+                                                    <div class="form-group mb-5">
+                                                        <label class="required fs-6 fw-bold mb-2">Store Name</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder="Store Name" name="name" />
+                                                        <label class="required fs-6 fw-bold mb-2">Code</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder=" Code" name="code" />
+
+                                                    <label class="required fs-6 fw-bold mb-2">Currency</label>
+                                                        <select name="currency" class="form-select  form-select-solid" data-placeholder="Select Currency" data-allow-clear="true" data-hide-search="true">
+                                                            <?php
+                                                            $default_currency  = $this->Xin_model->get_default_currency();
+                                                            $currency_data = $this->Xin_model->get_currencies(1);
+                                                            foreach($currency_data->result() as $currencies) {
+                                                                ?>
+                                                                <option value="<?php echo $currencies->code?>"<?php if($default_currency[0]->default_currency_symbol==$currencies->code) echo 'selected';?>><?php echo $currencies->code?></option>
+                                                            <?php }
+                                                            ?>
+                                                        </select>
+                                                        <label class="required fs-6 fw-bold mb-2">Latitude</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder="Latitude" name="latitude" />
+                                                    <label class="required fs-6 fw-bold mb-2">Longitude</label>
+                                                        <input type="text" class="form-control form-control-solid" placeholder="Longitude" name="longitude" />
+
+                                                        <label class="required fs-6 fw-bold mb-2">Store Address</label>
+                                                        <textarea class="form-control form-control-solid" placeholder="Address" name="address" /></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary save">Save</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="box box-block bg-white p-5">
+                                                <div id ="export_store" class="d-flex justify-content-end">
+<!--                                                    <button id="sync_store" class="btn btn-primary save">Sync Data</button>-->
+                                                </div>
+
+                                                <h2><strong>List All</strong> Stores</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-row-bordered table-row-gray-100 align-middle gs-3 gy-3" id="xin_table_store" style="width: 100%;" role="grid">
+                                                        <thead>
+                                                        <tr class="fw-bolder text-muted bg-light">
+                                                            <th class="ps-4 rounded-start w-125px">Action</th>
+                                                            <th class="ps-4 rounded-start">Name</th>
+                                                            <th class="ps-4 rounded-start">Code</th>
+                                                            <th class="ps-4 rounded-start">Currency</th>
+                                                            <th class="ps-4 rounded-start">Latitude</th>
+                                                            <th class="ps-4 rounded-start">Longitude</th>
+                                                            <th class="ps-4 rounded-start">Address</th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }
                             if (in_array('34', $role_resources_ids)) { ?>
 
                                 <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="v-pills-cost-center-tab">
@@ -269,7 +399,7 @@ $session = $this->session->userdata('username');?>
                                             <div class="box box-block bg-white p-5">
                                                 <div id ="export_company" class="d-flex justify-content-end"><button id="sync_company" class="btn btn-primary save">Sync Data</button></div>
 
-                                                <h2><strong>List All</strong> Cost Company</h2>
+                                                <h2><strong>List All</strong>  Company</h2>
                                                 <div class="table-responsive">
                                                     <table class="table table-row-bordered table-row-gray-100 align-middle gs-3 gy-3" id="xin_table_companies" style="width: 100%;" role="grid">
                                                         <thead>
@@ -386,6 +516,63 @@ $session = $this->session->userdata('username');?>
                                                             <th class="ps-4 rounded-start w-125px">Action</th>
                                                             <th class="ps-4 rounded-start">Supplier</th>
                                                             <th class="ps-4 rounded-start">Ref.No</th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }
+                            if (in_array('15', $role_resources_ids)) { ?>
+
+                                <div class="tab-pane fade" id="period" role="tabpanel" aria-labelledby="v-pills-vendor-tab">
+                                    <div class="row">
+                                        <div class="col-md-4 ">
+                                            <div class="box box-block bg-white p-3">
+                                                <h4><strong>Add New</strong> Period</h4>
+                                                <div class="separator mb-4 mt-4"></div>
+                                                <form class="m-b-1 add" id="add_period" action="<?php echo site_url("settings/add_period") ?>" name="add_period" method="post">
+                                                    <div class="form-group mb-5">
+                                                        <label class="required fs-6 fw-bold mb-2">Date Range</label>
+                                                        <input type="text" id="reportrange" name="range" class='form-control form-select-solid'>
+                                                            <i class="fa fa-calendar"></i>&nbsp;
+                                                            <span></span> <i class="fa fa-caret-down"></i>
+                                                        </input>                                                    </div>
+                                                    <div class="form-group mb-5">
+                                                        <label class="required fs-6 fw-bold mb-2">Category</label>
+                                                        <select class="form-control form-select form-control-solid mb-3 mb-lg-0" name="category">
+                                                            <?php $categories = $this->Xin_model->get_all_allowance_category();
+                                                            foreach($categories->result() as $row){?>
+                                                                <option value="<?php echo $row->id?>"><?php echo $row->name?></option>
+                                                            <?php }?>
+                                                        </select>
+                                                    </div>
+
+
+                                                    <button type="submit" class="btn btn-primary save">Save</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <div class="box box-block bg-white p-5">
+                                                <div id ="export_period" class="d-flex justify-content-end">
+<!--                                                    <button id="sync_vendor" class="btn btn-primary save">Sync Data</button>-->
+                                                </div>
+
+
+                                                <h2><strong>List All</strong> Allowance Periods</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-row-bordered table-row-gray-100 align-middle gs-3 gy-3" id="xin_table_periods" style="width: 100%;" role="grid">
+                                                        <thead>
+                                                        <tr class="fw-bolder text-muted bg-light">
+                                                            <th class="ps-4 rounded-start w-125px">Action</th>
+                                                            <th class="ps-4 rounded-start">ID</th>
+                                                            <th class="ps-4 rounded-start">From Date</th>
+                                                            <th class="ps-4 rounded-start">To Date</th>
+                                                            <th class="ps-4 rounded-start">Catgeory</th>
                                                         </tr>
                                                         </thead>
                                                     </table>

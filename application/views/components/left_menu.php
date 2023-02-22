@@ -171,31 +171,37 @@ $role_resources_ids = explode(',',$role_user[0]->role_resources);
                         </div>
                     </div>
                 </div>
-                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?=($this->uri->segment(2)==='allowances')?'show':''?>">
+
                     <span class="menu-link">
                         <span class="menu-icon">
                             <i class="bi bi-cart fs-3"></i>
                         </span>
                         <span class="menu-title">Purchases & Allowance</span>
+
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion menu-active-bg">
+                        <?php if(in_array('7',$role_resources_ids)) {?>
+
                         <div class="menu-item">
-                            <a class="menu-link" href="#">
+
+                            <a class="menu-link <?=($this->uri->segment(1)==='allowances')?'active':''?>" href="<?php echo site_url('allowances'); ?>">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">List All</span>
+                                <span class="menu-title">List All Allowances</span>
                             </a>
                         </div>
-                        <div class="menu-item">
-                            <a class="menu-link" href="#">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Add New</span>
-                            </a>
-                        </div>
+                        <?php } ?>
+<!--                        <div class="menu-item">-->
+<!--                            <a class="menu-link" href="#">-->
+<!--                                <span class="menu-bullet">-->
+<!--                                    <span class="bullet bullet-dot"></span>-->
+<!--                                </span>-->
+<!--                                <span class="menu-title">Add New</span>-->
+<!--                            </a>-->
+<!--                        </div>-->
                     </div>
                 </div>
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">

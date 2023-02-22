@@ -4,6 +4,8 @@ $user_info = $this->Xin_model->read_user_info($session['user_id']);
 $role_user = $this->Xin_model->read_user_role_info($user_info[0]->user_role_id);
 $designation_info = $this->Xin_model->read_designation_info($user_info[0]->designation_id);
 $role_resources_ids = explode(',',$role_user[0]->role_resources);
+$periods =$this->Xin_model->get_all_periods();
+
 ?>
 <div class="toolbar" id="kt_toolbar">
     <!--begin::Container-->
@@ -153,18 +155,22 @@ $role_resources_ids = explode(',',$role_user[0]->role_resources);
                                                     <input type="text" name="emp_code" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Employee Code" />
                                                 </div>
                                             </div>
-                                            <div class="row form-group mb-7">
-                                                <div class="col-md-6">
 
-                                                    <label class="fw-bold fs-6 mb-2">Stores Allocated</label>
-                                                    <select class="form-control form-select form-control-solid mb-3 mb-lg-0" name="stores[]" multiple>
-                                                <option value="option1">Option 1</option>
-                                                <option value="option2">Option 2</option>
-                                                <option value="option3">Option 3</option>
-                                            </select>
-                                                </div>
+                                        </div>
+                                        <div class="row form-group mb-7">
+                                            <div class="col-md-12">
+
+                                                <label class="fw-bold fs-6 mb-2">Stores Allocated</label>
+                                                <select class="form-control form-select form-control-solid mb-3 mb-lg-0" id="store-select" name="stores[]" multiple>
+                                                    <?php $stores = $this->Xin_model->get_all_stores();
+                                                    foreach($stores->result() as $r){?>
+                                                        <option value="<?php echo $r->id?>"><?php echo $r->name?></option>
+                                                    <?php }?>
+                                                </select>
                                             </div>
                                         </div>
+
+                                        <div class="row form-group mb-7">
                                         <div class="text-center pt-15">
                                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Discard</button>
                                             <button type="submit" class="btn btn-primary save" data-kt-users-modal-action="submit">
@@ -172,6 +178,7 @@ $role_resources_ids = explode(',',$role_user[0]->role_resources);
                                                 <span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                             </button>
+                                        </div>
                                         </div>
                                     </form>
                                 </div>
@@ -191,14 +198,15 @@ $role_resources_ids = explode(',',$role_user[0]->role_resources);
                 <table class="table align-middle table-row-dashed fs-6 gy-5" id="xin_table_employee">
                     <thead>
                     <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
-                        <th class="min-w-125px">User</th>
+                        <th class="min-w-120px">User</th>
                         <th class="min-w-75px">Emp Code</th>
-                        <th class="min-w-125px">Email</th>
-                        <th class="min-w-125px">Contact</th>
-                        <th class="min-w-125px">Joined Date</th>
-                        <th class="min-w-125px">Last login</th>
-                        <th class="min-w-100px">Status</th>
-                        <th class=" min-w-100px">Actions</th>
+                        <th class="min-w-120px">Email</th>
+                        <th class="min-w-75px">Contact</th>
+                        <th class="min-w-125px">Stores</th>
+                        <th class="min-w-60px">Joined Date</th>
+                        <th class="min-w-60px">Last login</th>
+                        <th class="min-w-60px">Status</th>
+                        <th class=" min-w-60px">Actions</th>
                     </tr>
                     </thead>
                     <tbody class="text-gray-600 fw-bold">
@@ -210,3 +218,7 @@ $role_resources_ids = explode(',',$role_user[0]->role_resources);
     </div>
     <!--end::Container-->
 </div>
+<script>
+    var periods = JSON.parse('<?php echo json_encode($periods->result()); ?>');
+
+</script>

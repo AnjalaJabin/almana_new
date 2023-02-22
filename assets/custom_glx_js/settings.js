@@ -1,5 +1,39 @@
 $(document).ready(function(){
+	$('.form-select').select2();
+	$(function() {
 
+		var start = moment().startOf('year');
+		var end = moment();
+		function cb(start, end) {
+			$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+		}
+
+
+
+		$('#reportrange').daterangepicker({
+
+			startDate: start,
+			endDate: end,
+			locale: {
+				format: 'D MMM YYYY'
+			},
+			"showDropdowns": true,
+
+			ranges: {
+				'Today': [moment(), moment()],
+				'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+				'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+				'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+				'This Month': [moment().startOf('month'), moment().endOf('month')],
+				'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+				'This Year':[moment().startOf('year'), moment().endOf('year')],
+			}
+		}, cb);
+
+
+		cb(start, end);
+
+	});
     var xin_table_departments = $('#xin_table_departments').DataTable({
 		"bDestroy": true,
 		dom: 'lfrtipB',
@@ -18,6 +52,25 @@ $(document).ready(function(){
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}			
+	})
+ var xin_table_periods = $('#xin_table_periods').DataTable({
+		"bDestroy": true,
+		dom: 'lfrtipB',
+		buttons: [
+			{
+				text: '<i class="fas fa-file-pdf"></i>Export',
+				extend: 'pdf',
+				//class :
+				split: [ 'excel', 'csv','copy','print'],
+			}
+		],
+		"ajax": {
+            url : site_url+"settings/period_list/",
+            type : 'GET'
+        },
+		"fnDrawCallback": function(settings){
+		$('[data-toggle="tooltip"]').tooltip();
+		}
 	});
 
 	var xin_table_companies = $('#xin_table_companies').DataTable({
@@ -117,9 +170,47 @@ $(document).ready(function(){
 		}			
 	});
 	xin_table_cost_center.buttons().container().appendTo("#export_cost");
+var xin_table_doc_type = $('#xin_table_doc_type').DataTable({
+		"bDestroy": true,
+		dom: 'lfrtipB',
+		buttons: [
+			{
+				text: '<i class="fas fa-file-pdf"></i>Export',
+				extend: 'pdf',
+				split: [ 'excel', 'csv','copy','print'],
+			}
+		],
+		"ajax": {
+            url : site_url+"settings/doc_type_list/",
+            type : 'GET'
+        },
+		"fnDrawCallback": function(settings){
+		$('[data-toggle="tooltip"]').tooltip();
+		}
+	});
+	xin_table_cost_center.buttons().container().appendTo("#export_cost");
 	xin_table_companies.buttons().container().appendTo("#export_company");
 
-	
+	var xin_table_store = $('#xin_table_store').DataTable({
+		"bDestroy": true,
+		dom: 'lfrtipB',
+		buttons: [
+			{
+				text: '<i class="fas fa-file-pdf"></i>Export',
+				extend: 'pdf',
+				split: [ 'excel', 'csv','copy','print'],
+			}
+		],
+		"ajax": {
+			url : site_url+"settings/store_list/",
+			type : 'GET'
+		},
+		"fnDrawCallback": function(settings){
+			$('[data-toggle="tooltip"]').tooltip();
+		}
+	});
+	xin_table_store.buttons().container().appendTo("#export_store");
+
 	var xin_table_supplier = $('#xin_table_supplier').DataTable({
 		"bDestroy": true,
 		dom: 'lfrtipB',
@@ -166,7 +257,32 @@ $(document).ready(function(){
 		});
 	});
 	
-	
+	jQuery("#add_period").submit(function(e){
+	/*Form Submit*/
+	e.preventDefault();
+		var obj = jQuery(this), action = obj.attr('name');
+		jQuery('.save').prop('disabled', true);
+		jQuery.ajax({
+			type: "POST",
+			url: e.target.action,
+			data: obj.serialize()+"&is_ajax=28&data=add_period&type=add_period&form="+action,
+			cache: false,
+			success: function (JSON) {
+				if (JSON.error != '') {
+					toastr.error(JSON.error);
+					jQuery('.save').prop('disabled', false);
+				} else {
+					xin_table_periods.ajax.reload(function(){
+						toastr.success(JSON.result);
+					}, true);
+					jQuery('#add_period')[0].reset(); // To reset form fields
+					jQuery('.save').prop('disabled', false);
+				}
+			}
+		});
+	});
+
+
 	jQuery("#add_budget_sub_category").submit(function(e){
 	/*Form Submit*/
 	e.preventDefault();
@@ -266,6 +382,30 @@ $(document).ready(function(){
 			}
 		});
 	});
+	jQuery("#add_doctype").submit(function(e){
+	/*Form Submit*/
+	e.preventDefault();
+		var obj = jQuery(this), action = obj.attr('name');
+		jQuery('.save').prop('disabled', true);
+		jQuery.ajax({
+			type: "POST",
+			url: e.target.action,
+			data: obj.serialize()+"&is_ajax=28&data=add_doctype&type=add_doctype&form="+action,
+			cache: false,
+			success: function (JSON) {
+				if (JSON.error != '') {
+					toastr.error(JSON.error);
+					jQuery('.save').prop('disabled', false);
+				} else {
+					xin_table_doc_type.ajax.reload(function(){
+						toastr.success(JSON.result);
+					}, true);
+					jQuery('#add_doctype')[0].reset(); // To reset form fields
+					jQuery('.save').prop('disabled', false);
+				}
+			}
+		});
+	});
 	jQuery("#add_company").submit(function(e){
 		/*Form Submit*/
 		e.preventDefault();
@@ -343,7 +483,32 @@ $(document).ready(function(){
 		});
 	});
 	
-    
+    jQuery("#add_store").submit(function(e){
+	/*Form Submit*/
+	e.preventDefault();
+		var obj = jQuery(this), action = obj.attr('name');
+		jQuery('.save').prop('disabled', true);
+		jQuery.ajax({
+			type: "POST",
+			url: e.target.action,
+			data: obj.serialize()+"&is_ajax=28&data=add_store&type=add_store&form="+action,
+			cache: false,
+			success: function (JSON) {
+				if (JSON.error != '') {
+					toastr.error(JSON.error);
+					jQuery('.save').prop('disabled', false);
+				} else {
+					xin_table_store.ajax.reload(function(){
+						toastr.success(JSON.result);
+					}, true);
+					jQuery('#add_store')[0].reset(); // To reset form fields
+					jQuery('.save').prop('disabled', false);
+				}
+			}
+		});
+	});
+
+
     $('#edit_setting_datail').on('show.bs.modal', function (event) {
     		var button = $(event.relatedTarget);
     		var field_id = button.data('field_id');
@@ -361,6 +526,12 @@ $(document).ready(function(){
     			var field_add = '&data=cost_center&type=cost_center&';
     		}else if(field_type == 'supplier'){
     			var field_add = '&data=supplier&type=supplier&';
+    		}else if(field_type == 'store'){
+    			var field_add = '&data=store&type=store&';
+    		}else if(field_type == 'period'){
+    			var field_add = '&data=period&type=period&';
+    		}else if(field_type == 'doc_type'){
+    			var field_add = '&data=doc_type&type=doc_type&';
     		}
     		
     		
@@ -382,6 +553,9 @@ $(document).ready(function(){
 	xin_table_category.buttons().container().appendTo("#export_cat");
 	xin_table_departments.buttons().container().appendTo("#export_dep");
 	xin_table_supplier.buttons().container().appendTo("#export_supplier");
+	xin_table_store.buttons().container().appendTo("#export_store");
+	xin_table_periods.buttons().container().appendTo("#export_period");
+	xin_table_doc_type.buttons().container().appendTo("#export_doc_type");
 
 
 });
@@ -419,7 +593,19 @@ $(document).ready(function(){
 		var field_add = '&is_ajax=9&data=company&type=delete_record&';
 		var tb_name = 'xin_table_companies';
 	}
-	
+	else if(tk_type == 'store'){
+		var field_add = '&is_ajax=9&data=store&type=delete_record&';
+		var tb_name = 'xin_table_store';
+	}
+else if(tk_type == 'period'){
+		var field_add = '&is_ajax=9&data=period&type=delete_record&';
+		var tb_name = 'xin_table_periods';
+	}
+else if(tk_type == 'doc_type'){
+		var field_add = '&is_ajax=9&data=doc_type&type=delete_record&';
+		var tb_name = 'xin_table_doc_type';
+	}
+
 	/*Form Submit*/
 	e.preventDefault();
 		var obj = $(this), action = obj.attr('name');
@@ -433,9 +619,11 @@ $(document).ready(function(){
 					$('.delete-modal').modal('toggle');
 				} else {
 					$('.delete-modal').modal('toggle');
-					$('#'+tb_name).dataTable().ajax.reload(function(){
+
+					tb_name.api().ajax.reload(function(){
 						toastr.success(JSON.result);
 					}, true);
+
 					
 				}
 			}
